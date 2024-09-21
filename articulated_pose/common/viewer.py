@@ -76,7 +76,7 @@ class ARCTICViewer:
         size=(2024, 2024),
     ):
         if not interactive:
-            v = HeadlessRenderer(size=size) # size added by aditya
+            v = HeadlessRenderer(size=size)
         else:
             v = Viewer(size=size)
 

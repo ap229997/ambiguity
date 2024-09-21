@@ -95,7 +95,6 @@ class MethodViewer(ARCTICViewer):
         Rt[:, :3, :3] = np.eye(3)
         Rt[:, 1:3, :3] *= -1.0
 
-        # take K from meta_info, added by aditya
         K = data[f"meta_info.intrinsics"][0].astype(np.float64)
         
         # pack data
