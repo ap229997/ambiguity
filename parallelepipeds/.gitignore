@@ -3,3 +3,4 @@ vis_ppd*
 output*
 *.vscode*
 ppd_dataset.pkl
+gen_dataset.py

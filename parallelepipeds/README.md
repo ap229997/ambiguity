@@ -21,3 +21,6 @@ CUDA_VISIBLE_DEVICES=0 python ppd_network.py --output_type relative --lr 1e-3 --
 The plots can be visualized in `ppd_plots.ipynb`.
 
 The plots in Fig.2 can be generated using `script_ppd.py`.
+
+## License
+All the material here is released under the Creative Commons Attribution-NonCommerial 4.0 International License, found [here](https://creativecommons.org/licenses/by-nc/4.0/).
