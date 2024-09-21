@@ -1,0 +1,26 @@
+_BASE_: "Base.yaml"
+SOLVER:
+  TYPE: "sgd"
+  IMS_PER_BATCH: 2
+  BASE_LR: 0.0025
+  STEPS: (69600, 92800)
+  MAX_ITER: 200000
+  WARMUP_ITERS: 3625
+  WRITE_PERIOD: 20
+DATALOADER:
+  NUM_WORKERS: 0
+TEST:
+  EVAL_PERIOD: 1 # 5000
+VIS_PERIOD: 25000
+OUTPUT_DIR: ./logs/debug
+DATASETS:
+  TRAIN: ('nuScenes_train', 'nuScenes_val', 'KITTI_train', 'KITTI_val') # joint training
+  TEST: ('nuScenes_test', 'KITTI_test', )
+  CATEGORY_NAMES: ('car',) # only consider car in the experiments
+MODEL:
+  ROI_HEADS:
+    NUM_CLASSES: 1
+  ROI_CUBE_HEAD:
+    VIRTUAL_DEPTH: False
+    POS_ENC: center+corner_latent # dense_latent_ds, center+corner_latent, set to None for training without KPE
+    N_FREQ_POS_ENC: 8
